@@ -32,7 +32,7 @@ def getLastPrice(symbol):
 #         ltcusdt = ticker
 # print(tickers[0].get('symbol'))
 
-
+hello = 2
 
 
 
