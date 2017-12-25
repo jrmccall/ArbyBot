@@ -14,7 +14,7 @@ def start():
     Lltcprice = Label(text="LTC")
     Liotaprice = Label(text="IOTA")
     Lbccprice = Label(text="BCC")
-    lab = Label(root)
+    Lltcusdt= Label(root)
 
     coinlabel.grid(row=0, column=1, sticky=W+E+S, padx=6)
     usdlabel.grid(row=0, column=2, sticky=W+E, padx=6)
@@ -22,7 +22,7 @@ def start():
     ethlabel.grid(row=0, column=4, sticky=W+E, padx=6)
     bnblabel.grid(row=0, column=5, sticky=W+E, padx=6)
 
-    lab.grid(row=1, column=2, sticky=W+E, padx=6, pady=6)
+    Lltcusdt.grid(row=1, column=2, sticky=W+E, padx=6, pady=6)
     Lltcprice.grid(row=1, column=1, sticky=W+E, padx=6, pady=6)
     Lbccprice.grid(row=2, column=1, sticky=W+E, padx=6, pady=6)
     Liotaprice.grid(row=3, column=1, sticky=W+E, padx=6, pady=6)
@@ -33,7 +33,6 @@ def start():
         ltceth = round(binanceapi.getCoinPrice('LTCETH') * binanceapi.getCoinPrice('ETHUSDT'), 4)
         ltcbnb = round(binanceapi.getCoinPrice('LTCBNB') * binanceapi.getCoinPrice('BNBUSDT'), 4)
 
-        iotausdt = binanceapi.getCoinPrice('IOTAUSDT')
         iotabtc = round(binanceapi.getCoinPrice('IOTABTC') * binanceapi.getCoinPrice('BTCUSDT'), 4)
         iotaeth = round(binanceapi.getCoinPrice('IOTAETH') * binanceapi.getCoinPrice('ETHUSDT'), 4)
         iotabnb = round(binanceapi.getCoinPrice('IOTABNB') * binanceapi.getCoinPrice('BNBUSDT'), 4)
@@ -46,7 +45,6 @@ def start():
         # for coinPrice in coinPrices:
         #     T.insert(END, coinPrice['symbol'] + ": " + coinPrice['price'] +"\n")
         Lltcusdt.config(text=ltcusdt)
-        Lltcbtc.config(text=ltcbtc)
         root.after(1000, refreshCoin)  # run itself again after 1000 ms
 
     # run first time

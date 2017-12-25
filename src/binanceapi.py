@@ -33,8 +33,6 @@ def getAllTickers():
         print(ticker['symbol'] + ": " + ticker['price'])
     return sorted_tickers
 
-hello = 2
-
 
 
 # SAVED FOR EXAMPLE PURPOSES
