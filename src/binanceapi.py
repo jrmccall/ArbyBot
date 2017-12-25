@@ -11,7 +11,7 @@ client.ping()
 def getCoinPrice(symbol):
     ticker = client.get_symbol_ticker(symbol=symbol)
     price = ticker.get('price')
-    return price
+    return round(float(price), 4)
 
 
 BTCRATE = getCoinPrice('BTCUSDT')
@@ -23,14 +23,14 @@ def getLastPrice(symbol):
     ticker = client.get_ticker(symbol=symbol)
     lastPrice = ticker.get('lastPrice')
 
-    return lastPrice
+    return float(lastPrice)
 
 def getAllTickers():
     tickers = client.get_all_tickers()
     #Sort tickers
     sorted_tickers = sorted(tickers, key=lambda ticker: ticker['symbol'])
-    for ticker in sorted_tickers:
-        print(ticker['symbol'] + ": " + ticker['price'])
+    # for ticker in sorted_tickers:
+    #     print(ticker['symbol'] + ": " + ticker['price'])
     return sorted_tickers
 
 
