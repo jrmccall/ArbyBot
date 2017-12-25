@@ -25,14 +25,21 @@ def getLastPrice(symbol):
 
     return lastPrice
 
+def getAllTickers():
+    tickers = client.get_all_tickers()
+    #Sort tickers
+    sorted_tickers = sorted(tickers, key=lambda ticker: ticker['symbol'])
+    for ticker in sorted_tickers:
+        print(ticker['symbol'] + ": " + ticker['price'])
+    return sorted_tickers
+
+hello = 2
+
+
+
 # SAVED FOR EXAMPLE PURPOSES
 # for ticker in tickers:
 #     print(ticker)
 #     if ticker.get('symbol') == 'LTCUSDT':
 #         ltcusdt = ticker
 # print(tickers[0].get('symbol'))
-
-hello = 2
-
-
-
