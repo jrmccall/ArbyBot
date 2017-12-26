@@ -44,17 +44,18 @@ def start():
     Lltceth.grid(row=1, column=3, sticky=W+E, padx=6, pady=6)
     Lltcbnb.grid(row=1, column=4, sticky=W+E, padx=6, pady=6)
 
-    Liotabtc.grid(row=2, column=1, sticky=W+E, padx=6, pady=6)
-    Liotaeth.grid(row=2, column=2, sticky=W+E, padx=6, pady=6)
-    Liotabnb.grid(row=2, column=3, sticky=W+E, padx=6, pady=6)
+    Lbccusdt.grid(row=2, column=1, sticky=W + E, padx=6, pady=6)
+    Lbccbtc.grid(row=2, column=2, sticky=W + E, padx=6, pady=6)
+    Lbcceth.grid(row=2, column=3, sticky=W + E, padx=6, pady=6)
+    Lbccbnb.grid(row=2, column=4, sticky=W + E, padx=6, pady=6)
 
-    Lbccusdt.grid(row=3, column=1, sticky=W+E, padx=6, pady=6)
-    Lbccbtc.grid(row=3, column=2, sticky=W+E, padx=6, pady=6)
-    Lbcceth.grid(row=3, column=3, sticky=W+E, padx=6, pady=6)
-    Lbccbnb.grid(row=3, column=4, sticky=W+E, padx=6, pady=6)
+    Liotabtc.grid(row=3, column=2, sticky=W+E, padx=6, pady=6)
+    Liotaeth.grid(row=3, column=3, sticky=W+E, padx=6, pady=6)
+    Liotabnb.grid(row=3, column=4, sticky=W+E, padx=6, pady=6)
+
 
     def refreshCoin():
-        ltcusdt = binanceapi.getCoinPrice('LTCUSDT')
+        ltcusdt = round(binanceapi.getCoinPrice('LTCUSDT'), 4)
         ltcbtc = round(binanceapi.getCoinPrice('LTCBTC') * binanceapi.getCoinPrice('BTCUSDT'), 4)
         ltceth = round(binanceapi.getCoinPrice('LTCETH') * binanceapi.getCoinPrice('ETHUSDT'), 4)
         ltcbnb = round(binanceapi.getCoinPrice('LTCBNB') * binanceapi.getCoinPrice('BNBUSDT'), 4)
@@ -63,13 +64,14 @@ def start():
         iotaeth = round(binanceapi.getCoinPrice('IOTAETH') * binanceapi.getCoinPrice('ETHUSDT'), 4)
         iotabnb = round(binanceapi.getCoinPrice('IOTABNB') * binanceapi.getCoinPrice('BNBUSDT'), 4)
 
-        bccusdt = binanceapi.getCoinPrice('BCCUSDT')
+        bccusdt = round(binanceapi.getCoinPrice('BCCUSDT'), 4)
         bccbtc = round(binanceapi.getCoinPrice('BCCBTC') * binanceapi.getCoinPrice('BTCUSDT'), 4)
         bcceth = round(binanceapi.getCoinPrice('BCCETH') * binanceapi.getCoinPrice('ETHUSDT'), 4)
         bccbnb = round(binanceapi.getCoinPrice('BCCBNB') * binanceapi.getCoinPrice('BNBUSDT'), 4)
         # coinPrices = binanceapi.getAllTickers()
         # for coinPrice in coinPrices:
         #     T.insert(END, coinPrice['symbol'] + ": " + coinPrice['price'] +"\n")
+        print(iotaeth)
         Lltcusdt.config(text=ltcusdt)
         Lltcbtc.config(text=ltcbtc)
         Lltceth.config(text=ltceth)
