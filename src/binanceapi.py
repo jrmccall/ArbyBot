@@ -11,7 +11,7 @@ client.ping()
 def getCoinPrice(symbol):
     ticker = client.get_symbol_ticker(symbol=symbol)
     price = ticker.get('price')
-    return round(float(price),2)
+    return float(price)
 
 
 BTCRATE = getCoinPrice('BTCUSDT')
