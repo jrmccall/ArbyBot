@@ -14,10 +14,21 @@ def start():
     Lltcprice = Label(text="LTC")
     Liotaprice = Label(text="IOTA")
     Lbccprice = Label(text="BCC")
-    Lltcusdt= Label(root)
 
-    coinlabel.grid(row=0, column=1, sticky=W+E+S, padx=6)
-    usdlabel.grid(row=0, column=2, sticky=W+E, padx=6)
+    Lltcusdt= Label(root)
+    Lltcbtc = Label(root)
+    Lltceth = Label(root)
+    Lltcbnb = Label(root)
+
+    Liotabtc = Label(root)
+    Liotaeth = Label(root)
+    Liotabnb = Label(root)
+
+    Lbccusdt= Label(root)
+    Lbccbtc = Label(root)
+    Lbcceth = Label(root)
+    Lbccbnb = Label(root)
+
     btclabel.grid(row=0, column=3, sticky=W+E, padx=6)
     ethlabel.grid(row=0, column=4, sticky=W+E, padx=6)
     bnblabel.grid(row=0, column=5, sticky=W+E, padx=6)
@@ -45,6 +56,19 @@ def start():
         # for coinPrice in coinPrices:
         #     T.insert(END, coinPrice['symbol'] + ": " + coinPrice['price'] +"\n")
         Lltcusdt.config(text=ltcusdt)
+        Lltcbtc.config(text=ltcusdt)
+        Lltceth.config(text=ltcusdt)
+        Lltcbnb.config(text=ltcusdt)
+
+        Liotabtc.config(text=ltcusdt)
+        Liotaeth.config(text=ltcusdt)
+        Liotabnb.config(text=ltcusdt)
+
+        Lbccusdt.config(text=ltcusdt)
+        Lbccbtc.config(text=ltcusdt)
+        Lbcceth.config(text=ltcusdt)
+        Lbccbnb.config(text=ltcusdt)
+
         root.after(1000, refreshCoin)  # run itself again after 1000 ms
 
     # run first time
