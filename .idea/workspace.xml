@@ -43,8 +43,8 @@
       <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -216,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514187351618</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Almost done...">
+      <created>1514252190827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514252190827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -280,7 +287,8 @@
     <MESSAGE value="added src file" />
     <MESSAGE value="Added a gui example. Added a get all tickers method that sorts the tickers alphabetically" />
     <MESSAGE value="New version w/ positioning grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="New version w/ positioning grid" />
+    <MESSAGE value="Almost done..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -353,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

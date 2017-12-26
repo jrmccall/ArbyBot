@@ -29,6 +29,7 @@ def start():
     Lbcceth = Label(root)
     Lbccbnb = Label(root)
 
+
     btclabel.grid(row=0, column=3, sticky=W+E, padx=6)
     ethlabel.grid(row=0, column=4, sticky=W+E, padx=6)
     bnblabel.grid(row=0, column=5, sticky=W+E, padx=6)
