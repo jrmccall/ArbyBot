@@ -72,17 +72,17 @@ def start():
         #     T.insert(END, coinPrice['symbol'] + ": " + coinPrice['price'] +"\n")
         Lltcusdt.config(text=ltcusdt)
         Lltcbtc.config(text=ltcbtc)
-        Lltceth.config(text=ltcusdt)
-        Lltcbnb.config(text=ltcusdt)
+        Lltceth.config(text=ltceth)
+        Lltcbnb.config(text=ltcbnb)
 
-        Liotabtc.config(text=ltcusdt)
-        Liotaeth.config(text=ltcusdt)
-        Liotabnb.config(text=ltcusdt)
+        Liotabtc.config(text=iotabtc)
+        Liotaeth.config(text=iotaeth)
+        Liotabnb.config(text=iotabnb)
 
-        Lbccusdt.config(text=ltcusdt)
-        Lbccbtc.config(text=ltcusdt)
-        Lbcceth.config(text=ltcusdt)
-        Lbccbnb.config(text=ltcusdt)
+        Lbccusdt.config(text=bccusdt)
+        Lbccbtc.config(text=bccbtc)
+        Lbcceth.config(text=bcceth)
+        Lbccbnb.config(text=bccbnb)
 
         root.after(1000, refreshCoin)  # run itself again after 1000 ms
 
