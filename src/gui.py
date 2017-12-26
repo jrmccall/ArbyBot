@@ -29,15 +29,29 @@ def start():
     Lbcceth = Label(root)
     Lbccbnb = Label(root)
 
+    coinlabel.grid(row=0, column=0, sticky=W+E, padx=6, pady=6)
+    usdlabel.grid(row=0, column=1, sticky=W+E, padx=6, pady=6)
+    btclabel.grid(row=0, column=2, sticky=W+E, padx=6, pady=6)
+    ethlabel.grid(row=0, column=3, sticky=W+E, padx=6, pady=6)
+    bnblabel.grid(row=0, column=4, sticky=W+E, padx=6, pady=6)
 
-    btclabel.grid(row=0, column=3, sticky=W+E, padx=6)
-    ethlabel.grid(row=0, column=4, sticky=W+E, padx=6)
-    bnblabel.grid(row=0, column=5, sticky=W+E, padx=6)
+    Lltcprice.grid(row=1, column=0, sticky=W+E, padx=6, pady=6)
+    Lbccprice.grid(row=2, column=0, sticky=W+E, padx=6, pady=6)
+    Liotaprice.grid(row=3, column=0, sticky=W+E, padx=6, pady=6)
 
-    Lltcusdt.grid(row=1, column=2, sticky=W+E, padx=6, pady=6)
-    Lltcprice.grid(row=1, column=1, sticky=W+E, padx=6, pady=6)
-    Lbccprice.grid(row=2, column=1, sticky=W+E, padx=6, pady=6)
-    Liotaprice.grid(row=3, column=1, sticky=W+E, padx=6, pady=6)
+    Lltcusdt.grid(row=1, column=1, sticky=W+E, padx=6, pady=6)
+    Lltcbtc.grid(row=1, column=2, sticky=W+E, padx=6, pady=6)
+    Lltceth.grid(row=1, column=3, sticky=W+E, padx=6, pady=6)
+    Lltcbnb.grid(row=1, column=4, sticky=W+E, padx=6, pady=6)
+
+    Liotabtc.grid(row=2, column=1, sticky=W+E, padx=6, pady=6)
+    Liotaeth.grid(row=2, column=2, sticky=W+E, padx=6, pady=6)
+    Liotabnb.grid(row=2, column=3, sticky=W+E, padx=6, pady=6)
+
+    Lbccusdt.grid(row=3, column=1, sticky=W+E, padx=6, pady=6)
+    Lbccbtc.grid(row=3, column=2, sticky=W+E, padx=6, pady=6)
+    Lbcceth.grid(row=3, column=3, sticky=W+E, padx=6, pady=6)
+    Lbccbnb.grid(row=3, column=4, sticky=W+E, padx=6, pady=6)
 
     def refreshCoin():
         ltcusdt = binanceapi.getCoinPrice('LTCUSDT')
@@ -57,7 +71,7 @@ def start():
         # for coinPrice in coinPrices:
         #     T.insert(END, coinPrice['symbol'] + ": " + coinPrice['price'] +"\n")
         Lltcusdt.config(text=ltcusdt)
-        Lltcbtc.config(text=ltcusdt)
+        Lltcbtc.config(text=ltcbtc)
         Lltceth.config(text=ltcusdt)
         Lltcbnb.config(text=ltcusdt)
 
