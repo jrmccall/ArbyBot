@@ -1,7 +1,7 @@
 from binance.client import Client
 
-api_key = 'DVzJxwToIDoEyYKDXYwRRSXfAePFftU9iySjnb2ouARwyeuxZN0hVUeyF2sS1rbk'
-api_secret = '86qb9XwzIETqzt8ULLZRrjkn4WAZSshKNcdL7CUjEfdiZj4gNNXrj2tNICVXLhnK'
+api_key = 'GOES HERE'
+api_secret = 'GOES HERE'
 
 client = Client(api_key, api_secret)
 
@@ -32,6 +32,20 @@ def getAllTickers():
     for ticker in sorted_tickers:
         print(ticker['symbol'] + ": " + ticker['price'])
     return sorted_tickers
+
+def makeOrderTEST(symbol, side, quantity):
+    #todo: Get symbol, side, and quantity returning from some decision making, maybe do decision making in this function?
+    price = getLastPrice(symbol)
+    client.create_test_order(symbol=symbol, side=side, quantity=quantity, price=price)
+
+def checkPair(symbol):
+    usdt = getCoinPrice(symbol=symbol+'USDT')
+    btc = getCoinPrice(symbol=symbol+'BTC')
+    eth = getCoinPrice(symbol=symbol+'ETH')
+    bnb = getCoinPrice(symbol=symbol+'BNB')
+
+    # if usdt < btc:
+    #     if (btc - usdt)/usdt < 0.2:
 
 
 
